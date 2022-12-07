@@ -1,0 +1,426 @@
+package com.mooctest;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AndroidKeyCode;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.UnreachableBrowserException;
+
+public class Main {
+
+	/**
+	 * 所有和AppiumDriver相关的操作都必须写在该函数中
+	 * 
+	 * @param driver
+	 * @throws Exception
+	 */
+	public void test(AppiumDriver driver) throws Exception {
+		try {
+			Thread.sleep(6000); // 等待6s，待应用完全启动
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS); // 设置尝试定位控件的最长时间为8s,也就是最多尝试8s
+		/*
+		 * 余下的测试逻辑请按照题目要求进行编写
+		 */
+		Thread.sleep(1000);
+		//我同意
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/cq")).click();
+    	Thread.sleep(3000);
+    	//亲戚称呼
+    	driver.findElementByXPath("//android.widget.TextView[@text='亲戚称呼']").click();
+    	//夫
+     	Thread.sleep(1000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c6")).click();
+    	Thread.sleep(1000);
+    	//妻
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/cv")).click();
+    	Thread.sleep(1000);
+    	//back
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bk")).click();
+    	Thread.sleep(1000);
+    	//C
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bj")).click();
+    	Thread.sleep(1000);
+    	//父
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c4")).click();
+    	Thread.sleep(1000);
+    	//母
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ca")).click();
+    	Thread.sleep(1000);
+    	//兄
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ce")).click();
+    	Thread.sleep(1000);
+    	//弟
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c8")).click();
+    	Thread.sleep(1000);
+    	//C
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bj")).click();
+    	Thread.sleep(1000);
+    	//姐
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/cf")).click();
+    	Thread.sleep(1000);
+    	//妹
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c_")).click();
+    	Thread.sleep(1000);
+    	//子
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/cl")).click();
+    	Thread.sleep(1000);
+    	//back
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bk")).click();
+    	Thread.sleep(1000);
+    	//女
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bo")).click();
+    	Thread.sleep(1000);
+    	//互查
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c5")).click();
+    	Thread.sleep(1000);
+    	//等于
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/c3")).click();
+    	Thread.sleep(1000);
+    	//返回
+    	driver.sendKeyEvent(4);
+    	Thread.sleep(1000);
+    	//个税计算
+    	driver.findElementByXPath("//android.widget.TextView[@text='个税计算']").click();
+ 
+    	Thread.sleep(1000);
+    	//税前工资10000
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).sendKeys("10000");
+    	Thread.sleep(1000);
+    	//部分缴纳
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/mm")).click();
+    	Thread.sleep(1000);
+    	//社保基数
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fe")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fe")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fe")).sendKeys("2000");
+    	Thread.sleep(1000);
+    	//公积金基数
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/eq")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/eq")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/eq")).sendKeys("5000");
+    	Thread.sleep(1000);
+    	//地点缴纳城市
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/t3")).click();
+    	Thread.sleep(1000);
+    	//选择上海
+    	driver.findElementByXPath("//android.widget.TextView[@text='上海']").click();
+
+    	Thread.sleep(1000);
+    	//个税起征点
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/tp")).click();
+    	Thread.sleep(1000);
+    	
+    	//内地5000
+    	driver.findElementByXPath("//android.widget.TextView[@text='内地5000']").click();
+    	Thread.sleep(1000);
+    	
+    	
+    	//点击专项附加扣除
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rw")).click();
+    	Thread.sleep(1000);
+    	
+    	driver.findElementByXPath("//android.widget.TextView[@text='专项说明']").click();
+        driver.sendKeyEvent(4);
+//    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	//子女教育
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/sw")).click();
+    	Thread.sleep(1000);
+    	//输入5000
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ez")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ez")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ez")).sendKeys("5000");
+    	Thread.sleep(5000);
+    	//返回
+    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	Thread.sleep(1000);
+    	//缴纳项目
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/o2")).click();
+    	Thread.sleep(1000);
+    	//滑动屏幕
+    	int w = driver.manage().window().getSize().width;
+        int h = driver.manage().window().getSize().height;
+        int w1=(int) (w*0.5);
+        int h1=(int) (h*0.8);
+        int h2=(int) (h*0.2);
+        driver.swipe(w1,h1,w1,h2,1000);
+        //设置所有为1
+    	driver.findElementById("com.jincheng.supercaculator:id/f4").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f4").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f4").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/f5").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f5").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f5").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/f3").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f3").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f3").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/f1").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f1").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f1").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/f2").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f2").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f2").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/f0").click();
+		driver.findElementById("com.jincheng.supercaculator:id/f0").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/f0").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fo").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fo").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fo").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fp").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fp").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fp").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fn").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fn").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fn").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fl").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fl").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fl").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fm").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fm").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fm").sendKeys("1");
+
+		driver.findElementById("com.jincheng.supercaculator:id/fk").click();
+		driver.findElementById("com.jincheng.supercaculator:id/fk").clear();
+		driver.findElementById("com.jincheng.supercaculator:id/fk").sendKeys("1");
+    	
+    	//计算
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bg")).click();
+    	Thread.sleep(1000);
+    	//返回
+    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	Thread.sleep(1000);
+    	//点击年终奖
+    	driver.findElementByXPath("//android.widget.TextView[@text='年终奖']").click();
+   
+    	Thread.sleep(1000);
+    	//年终奖50000
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).sendKeys("50000");
+    	Thread.sleep(1000);
+    	//当月工资10000
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/et")).sendKeys("10000");
+    	Thread.sleep(1000);
+    	//计算
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bg")).click();
+    	Thread.sleep(1000);
+    	//返回
+    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	Thread.sleep(1000);
+    	//劳务报酬
+   
+    	driver.findElementByXPath("//android.widget.TextView[@text='劳务报酬']").click();
+    	Thread.sleep(1000);
+    	//收入100000
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).click();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).clear();
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fr")).sendKeys("100000");
+    	Thread.sleep(1000);
+    	//计算
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/bg")).click();
+    	Thread.sleep(1000);
+    	//返回
+    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	Thread.sleep(1000);
+    	//返回
+    	driver.sendKeyEvent(AndroidKeyCode.BACK);
+    	Thread.sleep(1000);
+    	//进制转换
+ 
+    	driver.findElementByXPath("//android.widget.TextView[@text='进制转换']").click();
+    	
+    	Thread.sleep(1000);
+    	//点击输入1
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/hw")).click();
+    	Thread.sleep(1000);
+
+    	//输入0
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ve")).click();
+    	Thread.sleep(1000);
+    	//输入1
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ll")).click();
+    	Thread.sleep(1000);
+
+
+    	//依次点击复制结果
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rk")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ri")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rl")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rj")).click();
+    	Thread.sleep(3000);
+    	//清空
+
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/o")).click();
+    	Thread.sleep(1000);
+    	//点击十进制
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/hu")).click();
+    	Thread.sleep(1000);
+    	//输入8
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/eg")).click();
+    	Thread.sleep(1000);
+    	//输入9
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/lb")).click();
+    	Thread.sleep(1000);
+    	//依次点击复制结果
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rk")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ri")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rl")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rj")).click();
+    	Thread.sleep(3000);
+    	//依次点击复制结果清空
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/o")).click();
+    	Thread.sleep(1000);
+
+    	//依次点击复制结果点击八进制
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/hx")).click();
+    	Thread.sleep(1000);
+    	//2
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/uy")).click();
+    	Thread.sleep(1000);
+    	//3
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/qo")).click();
+    	Thread.sleep(1000);
+    	//4
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/g8")).click();
+    	Thread.sleep(1000);
+    	//5
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/g3")).click();
+    	Thread.sleep(1000);
+    	//6
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/pk")).click();
+    	Thread.sleep(1000);
+    	//7
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/pe")).click();
+    	Thread.sleep(1000);
+    	//依次点击复制结果
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rk")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ri")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rl")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rj")).click();
+    	Thread.sleep(3000);
+    	//清空
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/o")).click();
+    	Thread.sleep(1000);
+    	//点击十六进制
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/hv")).click();
+    	//A
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/n")).click();
+    	Thread.sleep(1000);
+    	//B
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/au")).click();
+    	Thread.sleep(1000);
+    	//C
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/cz")).click();
+    	Thread.sleep(1000);
+    	//D
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ds")).click();
+    	Thread.sleep(1000);
+    	//E
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ee")).click();
+    	Thread.sleep(1000);
+    	//F
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/fw")).click();
+    	Thread.sleep(1000);
+    	//依次点击复制结果
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rk")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/ri")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rl")).click();
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("com.jincheng.supercaculator:id/rj")).click();
+    	Thread.sleep(3000);
+                driver.findElement(By.id("com.jincheng.supercaculator:id/m6")).click();
+    	Thread.sleep(3000);
+                driver.findElement(By.id("com.jincheng.supercaculator:id/dx")).click();
+    	Thread.sleep(3000);
+                driver.findElement(By.id("com.jincheng.supercaculator:id/o")).click();
+     	Thread.sleep(3000);
+ 
+ 
+	}
+
+	/**
+	 * AppiumDriver的初始化逻辑必须写在该函数中
+	 * 
+	 * @return
+	 */
+	public AppiumDriver initAppiumTest() {
+
+		AppiumDriver driver = null;
+		File classpathRoot = new File(System.getProperty("user.dir"));
+		File appDir = new File(classpathRoot, "apk");
+		File app = new File(appDir, "Calculator.apk");
+
+		// 设置自动化相关参数
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("browserName", "");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("deviceName", "Android Emulator");
+		capabilities.setCapability("noSign", "true");
+
+		// 设置apk路径
+		capabilities.setCapability("app", app.getAbsolutePath());
+
+		// 设置app的主包名和主类名
+		capabilities.setCapability("appPackage", "com.jincheng.supercaculator");
+		capabilities.setCapability("appActivity", "com.jincheng.supercaculator.activity.SplashActivity");
+		// 设置使用unicode键盘，支持输入中文和特殊字符
+		capabilities.setCapability("unicodeKeyboard", "true");
+		// 设置用例执行完成后重置键盘
+		capabilities.setCapability("resetKeyboard", "true");
+		// 初始化
+		try {
+			driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return driver;
+	}
+
+	public void start() throws Exception {
+		test(initAppiumTest());
+	}
+
+	public static void main(String[] args) throws Exception {
+		Main main = new Main();
+		main.start();
+	}
+
+}

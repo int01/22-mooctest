@@ -1,0 +1,404 @@
+//		driver.get("https://y.qq.com/");
+//		driver.manage().window().maximize();
+//		driver.findElement(By.linkText("音乐馆")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("首页")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("为你推荐")).click();
+//		Thread.sleep(200);
+
+
+//		driver.findElement(By.linkText("下一页")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("上一页")).click();
+
+
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/div[3]/ul/li[2]/div/h4/span")).click();
+//		Thread.sleep(200);
+
+
+
+
+//		String handle1 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle2 : driver.getWindowHandles()) {
+//			if (handle2.equals(handle1))
+//				continue;
+//			driver.switchTo().window(handle2);
+//		}
+//		Thread.sleep(3000);
+
+
+
+
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div/div[3]/a[1]")).click();
+//		Thread.sleep(3000);
+//		// 登录
+
+
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div/div[3]/a[1]")).click();
+//		Thread.sleep(500);
+
+
+
+//		String handle2 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle3 : driver.getWindowHandles()) {
+//			if (handle3.equals(handle2))
+//				continue;
+//			driver.switchTo().window(handle3);
+//		}
+////	    //我知道了
+//		Thread.sleep(1000);
+
+//		driver.findElement(
+//				By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[2]/div/div/ul[2]/li[1]/div/div[3]/div/a[1]")).click();
+//		Thread.sleep(200);
+
+
+
+//		driver.findElement(
+//				By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[2]/div/div/ul[2]/li[1]/div/div[3]/div/a[2]")).click();
+//		Thread.sleep(200);
+
+
+
+//		driver.findElement(By.xpath("//*[@id=\"fav_pop\"]/div/a")).click();
+//		Thread.sleep(200);
+
+
+//		driver.findElement(By.xpath("//*[@id=\"new_playlist\"]")).sendKeys("测试大赛全国总决赛");
+//		driver.findElement(By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/div/div/div[3]/button[2]")).click();
+//		Thread.sleep(1000);
+
+
+
+
+
+
+////	     //11
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[2]/div/div/ul[2]/li[1]/div/div[1]/input"))
+//				.click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[1]/a[1]")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[1]/a[3]")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/button")).click();
+//		Thread.sleep(1000);
+
+
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[3]/a[4]")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[1]/a[1]")).click();
+//		Thread.sleep(200);
+
+
+
+
+////	     //评论
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[3]/a[8]")).click();
+//		Thread.sleep(500);
+
+
+
+//		String handle3 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle4 : driver.getWindowHandles()) {
+//			if (handle4.equals(handle3))
+//				continue;
+//			driver.switchTo().window(handle4);
+//		}
+
+
+
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div/div[3]/a[3]")).click();
+//		Thread.sleep(4000);
+//		driver.findElement(By.xpath("//*[@id=\"comment_box\"]/div[2]/div[1]/div[1]/div[1]")).click();
+
+
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"comment_box\"]/div[2]/div[1]/div[1]/div[2]")).sendKeys("好听");
+
+ 
+
+
+//		driver.findElement(By.xpath("//*[@id=\"comment_box\"]/div[2]/a")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"comment_box\"]/div[2]/div[3]/div/div/div[1]/a[1]")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("发表评论")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/a[1]")).click();
+//		Thread.sleep(4000);
+
+
+
+
+//		// 返回上一个
+//		for (String handle5 : driver.getWindowHandles()) {
+//			if (handle5.equals(handle3))
+//				continue;
+//			driver.switchTo().window(handle3);
+//		}
+
+
+
+
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[4]/div[2]/div/div[2]/div/div/ul[1]/li[1]/input")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("删除")).click();
+//		Thread.sleep(200);
+
+
+
+
+
+//		for (String handle6 : driver.getWindowHandles()) {
+//			if (handle6.equals(handle1))
+//				continue;
+//			driver.switchTo().window(handle1);
+//		}
+
+
+
+
+//		driver.findElement(By.linkText("歌手")).click();
+//		Thread.sleep(4000);
+//		driver.findElement(By.linkText("C")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("欧美")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("男")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.linkText("流行")).click();
+//		Thread.sleep(200);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/ul/li[1]/a")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div[1]/div[3]/a[2]")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div[1]/ul/li[3]/a")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/ul/li[1]/div/h3/a")).click();
+//		Thread.sleep(2000);
+
+
+
+
+
+//		String handle4 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle5 : driver.getWindowHandles()) {
+//			if (handle5.equals(handle4))
+//				continue;
+//			driver.switchTo().window(handle5);
+//		}
+
+
+
+
+//		driver.findElement(By.linkText("全高清")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.linkText("全高清1080P")).click();
+//		Thread.sleep(2000);
+//		// 排行榜
+//		driver.findElement(By.linkText("排行榜")).click();
+//		Thread.sleep(4000);
+//		driver.findElement(By.linkText("网络歌曲榜")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[2]/div[3]/ul[2]/li[1]/div/div[3]/div/a[1]"))
+//				.click();
+//		Thread.sleep(4000);
+
+
+
+
+//		for (String handle5 : driver.getWindowHandles()) {
+//			if (handle5.equals(handle2))
+//				continue;
+//			driver.switchTo().window(handle2);
+//		}
+
+
+
+//
+//		String handle7 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle5 : driver.getWindowHandles()) {
+//			if (handle5.equals(handle7))
+//				continue;
+//			driver.switchTo().window(handle5);
+//		}
+
+
+
+
+//
+//		Thread.sleep(4000);
+//		driver.findElement(By.linkText("关闭声音")).click();
+//		Thread.sleep(4000);
+//		driver.findElement(By.linkText("打开纯洁模式")).click();
+//		Thread.sleep(6000);
+//		driver.findElement(By.linkText("票务")).click();
+//		Thread.sleep(5000);
+
+
+
+//		String handle6 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle5 : driver.getWindowHandles()) {
+//			if (handle5.equals(handle6))
+//				continue;
+//			driver.switchTo().window(handle5);
+//		}
+
+
+
+
+//		driver.findElement(By.className("user_ctrl__btn")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.linkText("B")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(
+//				By.xpath("//*[@id=\"js_wrap\"]/div[2]/div[1]/div/div[1]/div/div/div[2]/div[2]/ul[2]/li[2]/a")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"js_wrap\"]/div[2]/div[2]/div/ul/li[4]/a")).click();
+//		Thread.sleep(3000);
+//
+//		driver.findElement(By.xpath("//*[@id=\"js_wrap\"]/div[5]/div/div[1]/ul/li[1]/a/img")).click();
+//		Thread.sleep(2000);
+//
+
+
+//		String handle8 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle9 : driver.getWindowHandles()) {
+//
+//			if (handle9.equals(handle8))
+//				continue;
+//			driver.switchTo().window(handle9);
+//		}
+//
+//		Thread.sleep(3000);
+//
+
+
+
+//		driver.findElement(By.xpath("//*[@id=\"sell\"]/div/div/div/div[3]/div/div/a")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.linkText("我的订单")).click();
+//		Thread.sleep(2000);
+//
+//		for (String handle10 : driver.getWindowHandles()) {
+//
+//			if (handle10.equals(handle8))
+//				continue;
+//			driver.switchTo().window(handle8);
+//		}
+//
+//		Thread.sleep(3000);
+//
+//		driver.findElement(By.linkText("我的音乐")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.id("create_tab")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.linkText("测试大赛全国总决赛")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.linkText("编辑歌单")).click();
+//		Thread.sleep(6000);
+////    
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div[2]/div/div/textarea")).sendKeys("比赛用歌");
+//		Thread.sleep(2000);
+////     
+//		driver.findElement(By.linkText("国语")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.linkText("英语")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div[4]/div/div[1]/div/span[2]/a")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div[5]/span[2]")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div[6]/button[1]")).click();
+//		Thread.sleep(4000);
+//
+//		// 开放平台
+//		Thread.sleep(4000);
+//		driver.findElement(By.linkText("开放平台")).click();
+//		Thread.sleep(2000);
+
+
+
+//
+//		String handle9 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle10 : driver.getWindowHandles()) {
+//			if (handle10.equals(handle9))
+//				continue;
+//			driver.switchTo().window(handle10);
+//		}
+//
+//		driver.findElement(By.linkText("立即入驻")).click();
+//		Thread.sleep(3000);
+//
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div[2]/div[3]/div/ul/li[2]/div[2]")).click();
+//		Thread.sleep(2000);
+//
+//		String handle10 = driver.getWindowHandle();
+//		// 获取所有页面的句柄，并循环判断不是当前的句柄
+//		for (String handle11 : driver.getWindowHandles()) {
+//
+//			if (handle11.equals(handle10))
+//				continue;
+//			driver.switchTo().window(handle11);
+//		}
+//
+//		Thread.sleep(3000);
+//
+//		WebElement frame = driver.findElement(By.xpath("//*[@id=\"app\"]/div[3]/div/div[2]/iframe"));
+//		driver.switchTo().frame(frame);
+//
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[1]/div/div/input"))
+//				.sendKeys("全国软件测试大赛");
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[3]/div/div/label[3]/span[1]"))
+//				.click();
+//		Thread.sleep(1000);
+//
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[4]/div/div/div[1]/input"))
+//				.click();
+//		Thread.sleep(1000);
+//		driver.findElement(
+//				By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[4]/div/div/div[2]/div[1]/div[1]/ul/li[1]"))
+//				.click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[5]/div/div/div[1]/input"))
+//				.click();
+//		Thread.sleep(1000);
+//		driver.findElement(
+//				By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[5]/div/div/div[2]/div[1]/div[1]/ul/li[1]"))
+//				.click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[6]/div/div/textarea"))
+//				.sendKeys("2021年全国软件测试大赛总决赛");
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/form/div[1]/div/div/div[1]/input"))
+//				.click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath(
+//				"//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/form/div[1]/div/div/div[2]/div[1]/div[1]/ul/li[5]"))
+//				.click();
+//		Thread.sleep(3000);
+//		// 提交
+////    driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[2]/div[1]/form/div[15]/button")).click();
+////    Thread.sleep(3000);
+//		driver.switchTo().defaultContent();
+//		for (String handle12 : driver.getWindowHandles()) {
+//
+//			if (handle12.equals(handle8))
+//				continue;
+//			driver.switchTo().window(handle8);
+//		}
+//		Thread.sleep(5000);
+//		driver.findElement(By.linkText("退出登录")).click();
+//		Thread.sleep(3000);

@@ -1,0 +1,105 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+
+public class Example {
+
+	// Mooctest Selenium Example
+
+	// <!> Check if selenium-standalone.jar is added to build path.
+
+	public static void test(WebDriver driver) throws InterruptedException {
+		// TODO Test script
+		// eg:driver.get("https://www.baidu.com/")
+		// eg:driver.findElement(By.id("wd"));
+		driver.get("http://new.9sky.com/");
+//		driver.manage().window().maximize();
+		// 隐示等待
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Map<String, Object> vars = new HashMap<String, Object>();
+		vars.put("window_handles", driver.getWindowHandles());
+		driver.findElement(By.cssSelector(".d_img2")).click();
+		Thread.sleep(3000);
+//		当前所有的具柄
+		Set<String> whNow = driver.getWindowHandles();
+		Set<String> whThen = (Set<String>) vars.get("window_handles");
+		if (whNow.size() > whThen.size()) {
+			whNow.removeAll(whThen);
+		}
+		String win00 = whNow.iterator().next();
+		vars.put("win00", win00);
+		driver.switchTo().window(vars.get("win00").toString());
+
+		driver.findElement(By.linkText("唱片")).click();
+		driver.findElement(By.linkText("蓝调")).click();
+		driver.findElement(By.linkText("付费")).click();
+		driver.findElement(By.linkText("最新")).click();
+		driver.findElement(By.linkText("全部")).click();
+		driver.findElement(By.linkText("免费")).click();
+		driver.findElement(By.linkText("最热")).click();
+		driver.findElement(By.linkText("查看更多")).click();
+		vars.put("window_handles", driver.getWindowHandles());
+//		点击第一个
+		driver.findElement(By.cssSelector(".new_music:nth-child(1) img")).click();
+
+		Set<String> whNow1 = driver.getWindowHandles();
+		Set<String> whThen1 = (Set<String>) vars.get("window_handles");
+		if (whNow1.size() > whThen1.size()) {
+			whNow1.removeAll(whThen1);
+		}
+		String win01 = whNow1.iterator().next();
+		vars.put("win01", win01);
+		driver.switchTo().window(win01);
+		
+		vars.put("window_handles", driver.getWindowHandles());
+//		driver.findElement(By.linkText("Beyond The Horizon")).click();
+		driver.findElement(By.xpath("//ul[2]/li/a")).click();
+		Set<String> whNow2 = driver.getWindowHandles();
+		Set<String> whThen2 = (Set<String>) vars.get("window_handles");
+		if (whNow2.size() > whThen2.size()) {
+			whNow2.removeAll(whThen2);
+		}
+		String win02 = whNow2.iterator().next();
+		vars.put("win02", win02);
+
+		driver.switchTo().window(win02);
+		
+	    driver.findElement(By.cssSelector(".jp-pause > img")).click();
+	    driver.findElement(By.cssSelector(".tion_box > img")).click();
+	    driver.findElement(By.cssSelector(".next > img")).click();
+	    vars.put("window_handles", driver.getWindowHandles());
+	    driver.findElement(By.id("playimg")).click();
+	    
+	    Set<String> whNow3 = driver.getWindowHandles();
+		Set<String> whThen3 = (Set<String>) vars.get("window_handles");
+		if (whNow3.size() > whThen3.size()) {
+			whNow3.removeAll(whThen3);
+		}
+		String win03 = whNow3.iterator().next();
+		vars.put("win03", win03);
+	    driver.switchTo().window(win03);
+	    
+	    driver.findElement(By.linkText("音乐人")).click();
+	    driver.findElement(By.linkText("发现")).click();
+	}
+
+	public static void main(String[] args) {
+		// Run main function to test your script.
+		WebDriver driver = new ChromeDriver();
+		try {
+			test(driver);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			driver.quit();
+		}
+	}
+
+}
